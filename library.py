@@ -22,7 +22,7 @@ class Library:
             try:
                 with open(self.file_name) as file:
                     current_database = file.read()
-                    print(f'~~~~~~~~~~~~~~ Current database:\n {current_database}')
+                    print(f'~~~~~~~~~~~~~~ Current database:\n {current_database}\n')
                     print('~~~~~~~~~~~~~~ Current database ~~~~~~~~~~~~~~')
             except FileNotFoundError:
                 print(f"File {self.file_name} not found.")
@@ -61,7 +61,7 @@ class Library:
                     print('Publish year needs to be a number')
 
             book = Book(book_name,author,isbn,publish_year)
-            print(f'Would you like to add following book to library (yes/no) :'+ str(book))
+            print(f'Would you like to add following book to library (yes/no): {book}')
 
             while True:
                 save = input('Save book? (yes/no): ').strip().lower()
@@ -77,8 +77,8 @@ class Library:
 
         def save_to_file(self,book,):
             with open (self.file_name,'a') as f:
-                f.write(str(book)+'\n')
-                print(f'Book: {str(book)},saved to library!')
+                f.write(book+'\n')
+                print(f'Book: {book},saved to library!')
                 self.sort_library()
 
         def sort_library(self):
