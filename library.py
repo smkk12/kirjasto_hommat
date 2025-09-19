@@ -73,7 +73,7 @@ class Library:
                 print('Book not saved')
                 break
             else:
-                print(f'Invalid input. Please enter "yes" or "no".')
+                print('Invalid input. Please enter "yes" or "no".')
 
     def save_to_file(self,book,):
         with open (self.file_name,'a') as f:
