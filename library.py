@@ -46,8 +46,8 @@ class Library:
                     print(f'Not a valid option: {activity}')
 
         def add_new_book(self):
-            book_name = input('Insert book name: ')
-            author = input('Insert writers name: ')
+            book_name = input('Insert book name: ').strip()
+            author = input('Insert writers name: ').strip()
             isbn = input('Insert ISBN: ').strip()
             while True:
                 publish_year_input = input('Enter publish year: ').strip()
@@ -80,14 +80,12 @@ class Library:
 
         def sort_library(self):
             with open(self.file_name, 'r') as file:
-
                 lines = [line.strip() for line in file]
                 lines.sort(key=lambda x: int(x.split('/')[-1]))
 
                 with open(self.file_name, 'w') as file:
                     for line in lines:
                         file.write(line + '\n')
-
 
 def main():
     parser = argparse.ArgumentParser(description='Use "--file_name=<your text file here>" to start the program')
