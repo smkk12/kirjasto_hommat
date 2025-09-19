@@ -40,7 +40,7 @@ class Library:
                     self.read_library_database()
 
                 elif activity == '3':
-                    print("Exiting program.")
+                    print('Exiting program.')
                     sys.exit()
                     break 
                 else:
