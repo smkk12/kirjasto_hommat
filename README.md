@@ -1,2 +1,2 @@
-# vala_ohjelmointi_tehtava
+# Ohjelmointi harjoitus
 Library task 
