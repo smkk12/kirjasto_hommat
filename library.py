@@ -19,10 +19,13 @@ class Library:
 
         def read_library_database(self):
             self.sort_library()
-            with open (self.file_name) as file:
-                current_database = file.read()
-                print(f'~~~~~~~~~~~~~~ Current database:\n {current_database}')
-                print('~~~~~~~~~~~~~~ Current database ~~~~~~~~~~~~~~')
+            try:
+                with open(self.file_name) as file:
+                    current_database = file.read()
+                    print(f'~~~~~~~~~~~~~~ Current database:\n {current_database}')
+                    print('~~~~~~~~~~~~~~ Current database ~~~~~~~~~~~~~~')
+            except FileNotFoundError:
+                print(f"File {self.file_name} not found.")
 
         def main_menu(self):
             while True:
