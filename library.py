@@ -41,8 +41,7 @@ class Library:
 
                 elif activity == '3':
                     print('Exiting program.')
-                    sys.exit()
-                    break 
+                    sys.exit() 
                 else:
                     print(f'Not a valid option: {activity}')
 
