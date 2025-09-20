@@ -22,7 +22,7 @@ class Library:
         try:
             with open(self.file_name) as file:
                 current_database = file.read()
-                print(f'~~~~~~~~~~~~~~ Current database:\n {current_database}\n')
+                print(f'~~~~~~~~~~~~~~ Current database: ~~~~~~~~~~~~~~\n{current_database}')
                 print('~~~~~~~~~~~~~~ Current database ~~~~~~~~~~~~~~')
         except FileNotFoundError:
             print(f"File {self.file_name} not found.")
